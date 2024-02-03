@@ -1,4 +1,5 @@
 import { Injectable, NestMiddleware, UnauthorizedException } from '@nestjs/common';
+import { Prisma } from '@prisma/client';
 import { log } from 'console';
 import { PrismaService } from 'src/prisma/prisma.service';
 
