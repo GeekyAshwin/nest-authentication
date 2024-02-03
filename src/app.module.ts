@@ -16,8 +16,8 @@ import { VerfiyTokenMiddleware } from './middlewares/verfiy-token/verfiy-token.m
 })
 export class AppModule {
   configure(consumer: MiddlewareConsumer) {
-    consumer
-      .apply(VerfiyTokenMiddleware)
-      .forRoutes('');
+    // consumer
+    //   .apply(VerfiyTokenMiddleware)
+    //   .forRoutes('');
   }
 }
