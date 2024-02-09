@@ -24,6 +24,17 @@ export class UsersService {
     });
   }
 
+  signInWithGoogle(payload: Prisma.UserCreateInput) {
+    console.log(payload)
+    const data = {
+      email: payload.email,
+      name: payload.name,
+      email_verified: payload.email_verified,
+      picture: payload.picture,
+    }
+    return this.prisma.user.create({data});
+  }
+
   async saveToken(data: Prisma.RememberUserTokenCreateInput) {
     return await this.prisma.rememberUserToken.create({data});
   }
